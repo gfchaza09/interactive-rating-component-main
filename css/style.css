@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Overpass', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    position: relative;
+}
+
+.form, .card--thank-you {
+    display: flex;
+    flex-direction: column;
+    background-image: radial-gradient(circle, rgba(23,30,40,1) 0%, rgba(34,41,51,1) 180%);
+    background-position-y: -250px;
+    justify-content: space-between;
+    max-width: 400px;
+    height: 430px;
+    border-radius: 30px;
+}
+
+.form {
+    padding: 2.375rem 2.375rem 1.5rem;
+}
+
+.card--thank-you {
+    padding: 2.375rem 2rem 1.5rem;
+}
+
+.container--text {
+    margin-top: 1rem;
+}
+
+.form h2 {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.form p {
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+
+.container--rating {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btn, .btn--star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #252F38;
+    color: #6E7580;
+    text-align: center;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.btn:target {
+    background-color: #7A8899;
+    color: hsl(0, 0%, 100%);
+}
+
+.btn--submit {
+    width: 100%;
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    margin: 10px auto;
+    font-family: 'Overpass', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+.btn--submit:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.card--thank-you {
+    background-color: #252d37;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+}
+
+.card--thank-you img {
+    width: 60%;
+    margin: 0px auto;
+}
+
+.card--thank-you span {
+    margin: 0px auto;
+    color: hsl(25, 97%, 53%);
+    background-color: #26323F;
+    border-radius: 1.5rem;
+    padding: .6rem .75rem .4rem;
+}
+
+.card--thank-you h3 {
+    text-align: center;
+    color:hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card--thank-you p {
+    text-align: center;
+    color:hsl(217, 12%, 63%);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.card--thank-you {
+    transform: rotateY(90deg);
+}
+
+.select {
+    background-color: #7C8897;
+    color:hsl(0, 0%, 100%);
+}
+
+.show {
+    transform: rotateY(0deg);
+    animation: showCard .5s ease-in;
+}
+
+.hide {
+    transform: rotateY(90deg);
+    animation: showCard 1s ease-in;
+}
+
+@keyframes showCard {
+    0% {
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes hideCard {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(90deg);
+    }
+}
+
+.attribution { color: #7A8899; font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:375px) {
+
+    .form, .card--thank-you {
+        max-width: 310px;
+        height: 360px;
+        border-radius: 1rem;
+    }
+
+    .form {
+        padding: 1.5rem;
+    }
+
+    .btn--star, .btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn--star img {
+        width: 35%;
+    }
+
+    .container--text {
+        margin: 0px;
+    }
+
+    .container--text h2 {
+        font-size: 1.5rem;
+    }
+
+    .container--text p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .btn {
+        font-size: .9rem;
+    }
+
+    .btn--submit {
+        font-size: .8rem;
+        letter-spacing: 2px;
+        padding: 13px;
+        margin: 0px auto 10px;
+    }
+
+    .card--thank-you {
+        padding: 2rem 1.5rem 2.5rem;
+    }
+
+    .card--thank-you span {
+        font-size: .9rem;
+        padding: 0.5rem 0.75rem 0.3rem;
+    }
+
+    .card--thank-you h3 {
+        margin-bottom: 0.75rem;
+    }
+
+    .card--thank-you p {
+        font-size: 13px;
+    }
+}
