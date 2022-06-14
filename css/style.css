@@ -43,7 +43,7 @@ main {
     margin-top: 1rem;
 }
 
-.form h2 {
+.form h1 {
     color: hsl(0, 0%, 100%);
     font-size: 1.75rem;
     margin-bottom: 0.75rem;
@@ -100,6 +100,7 @@ main {
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 3px;
+    transition: background-color .8s linear, color .5s linear;
 }
 
 .btn--submit:hover {
@@ -128,7 +129,7 @@ main {
     padding: .6rem .75rem .4rem;
 }
 
-.card--thank-you h3 {
+.card--thank-you h2 {
     text-align: center;
     color:hsl(0, 0%, 100%);
     font-size: 1.5rem;
@@ -210,7 +211,7 @@ main {
         margin: 0px;
     }
 
-    .container--text h2 {
+    .container--text h1 {
         font-size: 1.5rem;
     }
 
@@ -239,7 +240,7 @@ main {
         padding: 0.5rem 0.75rem 0.3rem;
     }
 
-    .card--thank-you h3 {
+    .card--thank-you h2 {
         margin-bottom: 0.75rem;
     }
 
